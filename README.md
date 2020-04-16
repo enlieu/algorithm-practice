@@ -1,2 +1,2 @@
 # algorithm-practice
-A place to track my algorithm practice progress!
+A place to track the progress of my algorithm practice!
