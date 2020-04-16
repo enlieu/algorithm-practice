@@ -22,7 +22,7 @@ function order(takeout, dineIn, served) {
   return false;
 }
 
-order([1, 3, 5], [2, 4, 6], [1, 2, 3, 4, 5, 6]); //true
+console.log(order([1, 3, 5], [2, 4, 6], [1, 2, 3, 4, 5, 6])); //true
 order([1, 3, 5, 7], [2, 4, 6], [1, 6, 3, 4, 5, 2]); //false
 order([1, 3, 8], [2, 4, 6, 9], [3, 5, 8, 6, 7, 1]); //false
 order([1, 3, 5, 7], [2, 4, 6, 9], [1, 2, 3, 4, 5, 6, 7, 9]); //true
