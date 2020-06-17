@@ -15,6 +15,7 @@ A place to track my algorithm practice progress!
 |658|[ Find K Closest Elements](https://leetcode.com/problems/find-k-closest-elements/)|[JavaScript](./solutions/658.%20Find%20K%20Closest%20ElementsJavaScript)|92 ms|
 |692|[ Top K Frequent Words](https://leetcode.com/problems/top-k-frequent-words/)|[JavaScript](./solutions/692.%20Top%20K%20Frequent%20WordsJavaScript)|72 ms|
 |700|[ Search in a Binary Search Tree](https://leetcode.com/problems/search-in-a-binary-search-tree/)|[JavaScript](./solutions/700.%20Search%20in%20a%20Binary%20Search%20TreeJavaScript)|124 ms|
+|941|[ Valid Mountain Array](https://leetcode.com/problems/valid-mountain-array/)|[JavaScript](./solutions/941.%20Valid%20Mountain%20ArrayJavaScript)|76 ms|
 |1029|[ Two City Scheduling](https://leetcode.com/problems/two-city-scheduling/)|[JavaScript](./solutions/1029.%20Two%20City%20SchedulingJavaScript)|104 ms|
 |1046|[ Last Stone Weight](https://leetcode.com/problems/last-stone-weight/)|[JavaScript](./solutions/1046.%20Last%20Stone%20WeightJavaScript)|68 ms|
 |1200|[ Minimum Absolute Difference](https://leetcode.com/problems/minimum-absolute-difference/)|[JavaScript](./solutions/1200.%20Minimum%20Absolute%20DifferenceJavaScript)|160 ms|
