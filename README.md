@@ -14,3 +14,4 @@ A place to track my algorithm practice progress!
 |1029|[ Two City Scheduling](https://leetcode.com/problems/two-city-scheduling/)|[JavaScript](./solutions/1029.%20Two%20City%20SchedulingJavaScript)|104 ms|
 |1046|[ Last Stone Weight](https://leetcode.com/problems/last-stone-weight/)|[JavaScript](./solutions/1046.%20Last%20Stone%20WeightJavaScript)|68 ms|
 |1200|[ Minimum Absolute Difference](https://leetcode.com/problems/minimum-absolute-difference/)|[JavaScript](./solutions/1200.%20Minimum%20Absolute%20DifferenceJavaScript)|160 ms|
+|1221|[ Split a String in Balanced Strings](https://leetcode.com/problems/split-a-string-in-balanced-strings/)|[JavaScript](./solutions/1221.%20Split%20a%20String%20in%20Balanced%20StringsJavaScript)|72 ms|
