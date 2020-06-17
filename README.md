@@ -8,3 +8,4 @@ A place to track my algorithm practice progress!
 |100|[ Same Tree](https://leetcode.com/problems/same-tree/)|[JavaScript](./solutions/100.%20Same%20TreeJavaScript)|68 ms|
 |114|[ Flatten Binary Tree to Linked List](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/)|[JavaScript](./solutions/114.%20Flatten%20Binary%20Tree%20to%20Linked%20ListJavaScript)|60 ms|
 |215|[ Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)|[JavaScript](./solutions/215.%20Kth%20Largest%20Element%20in%20an%20ArrayJavaScript)|152 ms|
+|226|[ Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)|[JavaScript](./solutions/226.%20Invert%20Binary%20TreeJavaScript)|68 ms|
