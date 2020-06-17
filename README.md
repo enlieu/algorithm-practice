@@ -12,3 +12,4 @@ A place to track my algorithm practice progress!
 |226|[ Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)|[JavaScript](./solutions/226.%20Invert%20Binary%20TreeJavaScript)|68 ms|
 |414|[ Third Maximum Number](https://leetcode.com/problems/third-maximum-number/)|[JavaScript](./solutions/414.%20Third%20Maximum%20NumberJavaScript)|68 ms|
 |1029|[ Two City Scheduling](https://leetcode.com/problems/two-city-scheduling/)|[JavaScript](./solutions/1029.%20Two%20City%20SchedulingJavaScript)|104 ms|
+|1046|[ Last Stone Weight](https://leetcode.com/problems/last-stone-weight/)|[JavaScript](./solutions/1046.%20Last%20Stone%20WeightJavaScript)|68 ms|
