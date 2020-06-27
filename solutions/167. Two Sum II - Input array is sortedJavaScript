@@ -1,0 +1,24 @@
+/**
+ * @param {number[]} numbers
+ * @param {number} target
+ * @return {number[]}
+ */
+var twoSum = function(numbers, target) {
+  let hash = {}
+  let sum = [];
+  
+  for (let i = 0; i < numbers.length; i++) {
+      let difference = target - numbers[i]
+      hash[difference] = i + 1
+    }
+  
+  for (let j = 0; j < numbers.length; j++) {
+    if (hash.hasOwnProperty(numbers[j])) {
+        sum.push(j + 1, hash[numbers[j]])
+        break;
+      }
+    }
+  
+      
+  return sum;
+};
