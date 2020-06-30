@@ -1,0 +1,33 @@
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {boolean}
+ */
+var containsNearbyDuplicate = function(nums, k) {
+  let hash = {};
+  
+  for (let i = 0; i < nums.length; i++) {
+    if (!hash.hasOwnProperty(nums[i])) {
+      hash[nums[i]] = []
+    }
+      hash[nums[i]].push(i)
+  }
+  
+  let vals = Object.values(hash).map((el) => el.sort((a, b) => a - b))
+  
+  for (let i = 0; i < vals.length; i++) {
+    if (vals[i].length > 1) {
+      let arr = vals[i]
+      let minDiff = Math.abs(arr[0] - arr[1])
+      for (let i = 2; i < arr.length; i++) {
+        minDiff = Math.min(minDiff, Math.abs(arr[i] - arr[i - 1]))      
+      }
+      return minDiff <= k 
+    }
+  }
+  return false
+    
+};
+
+
+
