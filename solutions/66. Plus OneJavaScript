@@ -1,0 +1,26 @@
+/**
+ * @param {number[]} digits
+ * @return {number[]}
+ */
+var plusOne = function(digits) {
+  
+  let not9;
+  
+  for (let i = 0; i < digits.length; i++) {
+    if (digits[i] !== 9) {
+      not9 = i
+    }
+  }
+  
+  if (not9 === digits.length - 1) {
+    digits[not9]++
+  } else if (not9 === undefined) {
+    digits.unshift(1)
+    digits.fill(0, 1)
+  } else {
+    digits[not9]++
+    digits.fill(0, not9 + 1)
+  }
+
+  return digits
+};
