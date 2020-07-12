@@ -27,6 +27,8 @@ var maxProbability = function(n, edges, succProb, start, end) {
   
   while (queue.length) {
     let [begin, odds] = queue.shift()
+    
+    if (visited.has(begin)) continue
     visited.add(begin)
     
     if (begin === end) {
