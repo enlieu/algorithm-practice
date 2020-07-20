@@ -4,21 +4,18 @@
  * @return {number[]}
  */
 var twoSum = function(numbers, target) {
-  let hash = {}
-  let sum = [];
+  let map = new Map();
+  let res = [];
   
   for (let i = 0; i < numbers.length; i++) {
-      let difference = target - numbers[i]
-      hash[difference] = i + 1
+    let difference = target - numbers[i]
+    if (!map.has(numbers[i])) {
+      map.set(difference, i)
     }
-  
-  for (let j = 0; j < numbers.length; j++) {
-    if (hash.hasOwnProperty(numbers[j])) {
-        sum.push(j + 1, hash[numbers[j]])
-        break;
-      }
+    if (map.has(numbers[i]) && map.get(numbers[i]) !== i) {
+      res.push(map.get(numbers[i]) + 1, i + 1)
+      break;
     }
-  
-      
-  return sum;
-};
+  }
+  return res;
+}
