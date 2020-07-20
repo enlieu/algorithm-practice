@@ -12,6 +12,7 @@ A place to track my algorithm practice progress!
 |215|[ Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)|[JavaScript](./solutions/215.%20Kth%20Largest%20Element%20in%20an%20ArrayJavaScript)|152 ms|
 |226|[ Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)|[JavaScript](./solutions/226.%20Invert%20Binary%20TreeJavaScript)|68 ms|
 |414|[ Third Maximum Number](https://leetcode.com/problems/third-maximum-number/)|[JavaScript](./solutions/414.%20Third%20Maximum%20NumberJavaScript)|68 ms|
+|498|[ Diagonal Traverse](https://leetcode.com/problems/diagonal-traverse/)|[JavaScript](./solutions/498.%20Diagonal%20TraverseJavaScript)|536 ms|
 |557|[ Reverse Words in a String III](https://leetcode.com/problems/reverse-words-in-a-string-iii/)|[JavaScript](./solutions/557.%20Reverse%20Words%20in%20a%20String%20IIIJavaScript)|76 ms|
 |658|[ Find K Closest Elements](https://leetcode.com/problems/find-k-closest-elements/)|[JavaScript](./solutions/658.%20Find%20K%20Closest%20ElementsJavaScript)|92 ms|
 |692|[ Top K Frequent Words](https://leetcode.com/problems/top-k-frequent-words/)|[JavaScript](./solutions/692.%20Top%20K%20Frequent%20WordsJavaScript)|72 ms|
