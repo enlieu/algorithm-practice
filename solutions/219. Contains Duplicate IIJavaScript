@@ -4,29 +4,30 @@
  * @return {boolean}
  */
 var containsNearbyDuplicate = function(nums, k) {
-  let hash = {};
-  
+  let map = new Map();
+  let diffs = []
   for (let i = 0; i < nums.length; i++) {
-    if (!hash.hasOwnProperty(nums[i])) {
-      hash[nums[i]] = []
+    if (!map.has(nums[i])) {
+      map.set(nums[i], [])
     }
-      hash[nums[i]].push(i)
+    map.get(nums[i]).push(i)
   }
   
-  let vals = Object.values(hash).map((el) => el.sort((a, b) => a - b))
-  
-  for (let i = 0; i < vals.length; i++) {
-    if (vals[i].length > 1) {
-      let arr = vals[i]
-      let minDiff = Math.abs(arr[0] - arr[1])
-      for (let i = 2; i < arr.length; i++) {
-        minDiff = Math.min(minDiff, Math.abs(arr[i] - arr[i - 1]))      
-      }
-      return minDiff <= k 
+  for (let [num, freq] of map.entries()) {
+    if (freq.length > 1) {
+      diffs.push(freq)
     }
   }
-  return false
-    
+  
+  let minDiff = Infinity
+  for (let i = 0; i < diffs.length; i++) {
+    for (let j = 1; j < diffs[i].length; j++) {
+      minDiff = Math.min(minDiff, diffs[i][j] - diffs[i][j - 1])
+      if (minDiff <= k) return true
+    }
+  }
+  
+  return false;
 };
 
 
