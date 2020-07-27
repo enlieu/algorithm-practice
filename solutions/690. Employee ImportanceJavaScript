@@ -1,0 +1,40 @@
+/**
+ * Definition for Employee.
+ * function Employee(id, importance, subordinates) {
+ *     this.id = id;
+ *     this.importance = importance;
+ *     this.subordinates = subordinates;
+ * }
+ */
+​
+/**
+ * @param {Employee[]} employees
+ * @param {number} id
+ * @return {number}
+ */
+var GetImportance = function(employees, id) {
+  let subMap = new Map();
+​
+  for (let i = 0; i < employees.length; i++) {
+    if (!subMap.has(employees[i][id])) {
+      subMap.set(employees[i].id, [employees[i].importance, employees[i].subordinates])
+    }
+  }
+​
+  let totalImportance = subMap.get(id)[0]
+​
+  let queue = [[id, subMap.get(id)]]
+​
+  while (queue.length) {
+    let [employee, [importance, subordinates]] = queue.shift();
+    if (subordinates.length > 0) {
+      for (const subordinate of subordinates) {
+        totalImportance += subMap.get(subordinate)[0]
+        queue.push([subordinate, subMap.get(subordinate)])
+        
+      }
+    }
+  }
+  
+  return totalImportance
+};
