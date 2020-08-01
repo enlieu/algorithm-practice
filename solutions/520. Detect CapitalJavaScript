@@ -1,0 +1,38 @@
+/**
+ * @param {string} word
+ * @return {boolean}
+ */
+var detectCapitalUse = function(word) {
+  let charCodes = [];
+  
+  //convert word to character codes
+  for (let i = 0; i < word.length; i++) {
+    charCodes.push(word.charCodeAt(i))
+  }
+  
+  //determine for three rules
+  
+  //if the character code for every letter is less than 91, all letters are capitalized
+  if (charCodes.every((code) => code < 91)) {
+    return true
+  }
+  
+  //if the character code for every letter is greater than 96, all letters are lower case
+  if (charCodes.every((code) => code > 96)) {
+    return true
+  }
+  
+  //if the first letter is capitalized, the rest of the letters need to be lower case
+  if (charCodes[0] < 91) {
+    for (let i = 1; i < charCodes.length; i++) {
+      //if letter's uppercase, return falase
+      if (charCodes[i] < 96) {
+        return false
+      }
+    }
+    return true
+  }
+  
+  //if fit none of these criteria, return false
+  return false
+}
