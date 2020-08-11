@@ -1,0 +1,24 @@
+/**
+ * @param {number[]} citations
+ * @return {number}
+ */
+var hIndex = function(citations) {
+  let bucket = new Array(citations.length + 1).fill(0)
+  
+  for (let i = 0; i < citations.length; i++) {
+    if (citations[i] > bucket.length - 1) {
+      bucket[bucket.length-1] += 1
+    } else {
+      bucket[citations[i]] += 1
+    }
+  }
+  
+  let currSum = 0;
+  
+  for (let j = bucket.length - 1; j >= 0; j--) {
+    currSum += bucket[j]  
+    if (currSum >= j) {
+      return j
+    }
+  }
+};
