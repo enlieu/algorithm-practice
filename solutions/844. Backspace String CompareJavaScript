@@ -1,0 +1,23 @@
+/**
+ * @param {string} S
+ * @param {string} T
+ * @return {boolean}
+ */
+​
+var backspaceCompare = function(S, T) {
+  return build(S) === build(T)
+};
+​
+const build = (str) => {
+  let stack = [];
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] !== '#') {
+      stack.push(str[i])
+    } else {
+      stack.pop();
+    }
+  }
+  return stack.join('')
+}
+​
+​
