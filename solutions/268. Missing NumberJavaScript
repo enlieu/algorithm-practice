@@ -1,0 +1,47 @@
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+​
+var missingNumber = function(nums) {
+  let iSum = 0;
+  let numSum = 0
+  
+  for (let i = 0; i < nums.length + 1; i++) {
+    iSum += i
+  }
+  
+  for (let i = 0; i < nums.length; i++) {
+    numSum += nums[i]
+  }
+  
+  return iSum - numSum
+    
+};
+​
+// var missingNumber = function(nums) {
+//   if (nums.length === 1) {
+//     return nums[0] === 0 ? 1 : 0
+//   } 
+  
+//   let map = new Map()
+//   let maxNum = Math.max(...nums)
+​
+//   for (let i = 0; i <= maxNum; i++) {
+//     map.set(i, false)
+//   }
+  
+//   for (const num of nums) {
+//     if (map.has(num)) {
+//       map.set(num, true)
+//     }
+//   }
+​
+//   for (const [num, bool] of map.entries()) {
+//     if (bool === false) {
+//       return num
+//     }
+//   }
+  
+//   return maxNum + 1
+// };
