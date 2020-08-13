@@ -1,0 +1,42 @@
+/**
+ * @param {string} characters
+ * @param {number} combinationLength
+ */
+var CombinationIterator = function(characters, combinationLength) {
+  this.idx = 0
+  this.combinations = []
+  
+  const generateCombos = (idx, current) => {
+    for (let i = idx; i < characters.length; i++) {
+      current += characters[i]
+      if (current.length === combinationLength) {
+        this.combinations.push(current)
+      }
+      generateCombos(i + 1, current);
+      current = current.slice(0, -1)
+    }
+  }
+  
+  generateCombos(0, '')
+};
+​
+/**
+ * @return {string}
+ */
+CombinationIterator.prototype.next = function() {
+  return this.combinations[this.idx++]
+};
+​
+/**
+ * @return {boolean}
+ */
+CombinationIterator.prototype.hasNext = function() {
+  return this.idx < this.combinations.length
+};
+​
+/** 
+ * Your CombinationIterator object will be instantiated and called as such:
+ * var obj = new CombinationIterator(characters, combinationLength)
+ * var param_1 = obj.next()
+ * var param_2 = obj.hasNext()
+ */
