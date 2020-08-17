@@ -1,0 +1,31 @@
+/**
+ * @param {number} candies
+ * @param {number} num_people
+ * @return {number[]}
+ */
+var distributeCandies = function(candies, num_people) {
+  let people = new Array(num_people).fill(0)
+  
+  let ptr = 0
+  let candyCount = 1
+  
+  while (candies > 0) {
+    people[ptr] += candyCount
+    candies -= candyCount  
+    
+    if (candies > candyCount) {
+      candyCount++
+    } else {
+      ptr === num_people - 1 ? people[0] += candies : people[ptr+1] += candies
+      break;
+    }
+    
+    ptr++
+    
+    if (ptr === num_people) {
+      ptr = 0
+    }
+  }
+  
+  return people
+};
