@@ -1,0 +1,24 @@
+/**
+ * @param {string} S
+ * @return {string}
+ */
+var toGoatLatin = function(S) {
+  let res = []
+  let split = S.split(' ')
+  let vowelSet = new Set(['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'])
+  
+  for (let i = 0; i < split.length; i++) {
+    let word = split[i]
+    let repeat ='a'.repeat(i + 1)
+    if (vowelSet.has(word[0])) {
+      word = `${word}ma${repeat}`
+      res.push(word)
+    } else {
+      let sliced = word.slice(1)
+      word = `${sliced}${word[0]}ma${repeat}`
+      res.push(word)
+    }
+  }
+  
+  return res.join(' ')
+};
