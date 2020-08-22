@@ -1,0 +1,18 @@
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+var findDuplicates = function(nums) {
+  let set = new Set();
+  let ans = [];
+  
+  for (const num of nums) {
+    if (!set.has(num)) {
+      set.add(num)
+    } else {
+      ans.push(num)
+    }
+  }
+  
+  return ans;
+};

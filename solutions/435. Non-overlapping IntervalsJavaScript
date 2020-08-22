@@ -1,0 +1,23 @@
+/**
+ * @param {number[][]} intervals
+ * @return {number}
+ */
+var eraseOverlapIntervals = function(intervals) {
+  intervals.sort((a, b) => a[1] - b[1])
+  
+  let currentInterval = intervals[0]
+  let counter = 0
+  
+  for (let i = 1; i < intervals.length; i++) {
+    let currentEnd = currentInterval[1]
+    let nextStart = intervals[i][0]
+    
+    if (currentEnd > nextStart) {
+      counter++
+    } else {
+      currentInterval = intervals[i]
+    }
+  }
+  
+  return counter
+};

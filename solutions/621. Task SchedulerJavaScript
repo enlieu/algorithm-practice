@@ -1,0 +1,32 @@
+/**
+ * @param {character[]} tasks
+ * @param {number} n
+ * @return {number}
+ */
+var leastInterval = function(tasks, n) {
+  let freqMap = new Map();
+  
+  for (const task of tasks) {
+    if (!freqMap.has(task)) {
+      freqMap.set(task, 1)
+    } else {
+      freqMap.set(task, freqMap.get(task) + 1)
+    }
+  }
+  
+  freqMap = new Map([...freqMap.entries()].sort((a, b) => b[1] - a[1]))
+  
+  //how many times the most occuring character appears
+  let maxNumFreq = [...freqMap.entries()][0][1] 
+  let counter = 0
+  
+  //how many of the letters appear that maxNum of times
+  for (const [letter, freq] of freqMap.entries()) {
+    if (freq === maxNumFreq) counter++
+  }
+  
+  //calculate the interval
+  let interval = (maxNumFreq - 1) * (n + 1) + counter
+  
+  return Math.max(interval, tasks.length)
+};

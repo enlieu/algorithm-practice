@@ -1,0 +1,49 @@
+/**
+ * @param {string} paragraph
+ * @param {string[]} banned
+ * @return {string}
+ */
+var mostCommonWord = function(paragraph, banned) {
+  let bannedWords = {};
+  let count = {};
+  
+  for (const word of banned) {
+    bannedWords[word] = true
+  }
+  
+  let split = paragraph.toLowerCase().split('')
+​
+  for (let i = 0; i < split.length; i++) {
+    if (split[i].charCodeAt(0) > 96 && split[i].charCodeAt(0) < 123 || split[i] === ' ') {
+      continue;
+    } else {
+      split[i] = ' '
+    }
+  }
+  
+  split = split.join('').split(' ')
+  
+  for (const word of split) {
+    if (bannedWords[word]) {
+      continue
+    }
+    
+    if (!count.hasOwnProperty(word)) {
+      count[word] = 1
+    } else {
+      count[word] += 1
+    }
+  }
+​
+  let freq = -Infinity
+  let res;
+  
+  for (let word in count) {
+    if (count[word] > freq && word !== '') {
+      freq = count[word]
+      res = word
+    }
+  }
+  
+  return res;
+};

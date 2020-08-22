@@ -1,0 +1,46 @@
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number[][]}
+ */
+var verticalTraversal = function(root) {
+  //bfs, process each node, assign a value to each node, group them by vertical and horizontal position
+  let queue = [[root, 0, 0]]
+  let processed = new Map()
+  
+  while (queue.length) {
+    let [currentNode, x, y] = queue.shift();
+    if (currentNode.left) {
+      queue.push([currentNode.left, x-1, y+1])
+    }
+    if (currentNode.right) {
+      queue.push([currentNode.right, x+1, y+1])
+    }
+​
+    if (!processed.has(x)) {
+      processed.set(x, [])
+    }
+    processed.get(x).push([currentNode.val, y])
+  }
+​
+  for (const [position, nodes] of processed.entries()) {
+    nodes.sort((a, b) => a[1] - b[1] || a[0] - b[0])
+  }
+  
+  let processedArray = [...processed.entries()].sort((a, b) => a[0] - b[0]).map((ele) => ele[1])
+  
+  let res = []
+  
+  for (let i = 0; i < processedArray.length; i++) {
+    res.push(processedArray[i].map((ele) => ele[0]))
+}
+  
+  return res
+};

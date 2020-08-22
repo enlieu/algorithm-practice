@@ -1,0 +1,28 @@
+/**
+ * @param {number[][]} grid
+ * @return {number}
+ */
+var shortestPathBinaryMatrix = function(grid) {
+  if (grid[0][0] === 1) return -1
+  
+  let path = 1
+  let queue = [[0, 0, path]]
+  
+  let directions = [[-1, -1], [-1, 0], [-1, 1], [0, -1], [0, 1], [1, -1], [1, 0], [1, 1]]
+  
+  while (queue.length) {
+    let [x, y, path] = queue.shift();
+    if (x === grid.length - 1 && y === grid[0].length - 1) {
+      return path
+    }
+    for (const [xShift, yShift] of directions) {
+      let newX = x + xShift
+      let newY = y + yShift
+      if (newX >= 0 && newY >= 0 && newX < grid.length && newY < grid[0].length && grid[newX][newY] === 0) {
+        queue.push([newX, newY, path + 1]) 
+        grid[newX][newY] = 1
+      }
+    }
+  }
+  return -1
+};
