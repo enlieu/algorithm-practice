@@ -1,9 +1,9 @@
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.left = (left===undefined ? null : left)
- *     this.right = (right===undefined ? null : right)
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
  * }
  */
 /**
@@ -11,47 +11,39 @@
  * @return {number}
  */
 var sumOfLeftLeaves = function(root) {
-  let sum = 0;
-  
-  if (root === null) {
-    return sum
+  if (root === null) return 0
+  let sum = 0
+  let queue = [root]
+  
+  while (queue.length) {
+    let current = queue.shift()
+    if (current.left) {
+      queue.push(current.left)
+      if (current.left.left === null && current.left.right === null) {
+        sum += current.left.val
+      }
+    }
+    if (current.right) {
+      queue.push(current.right)
+    }
   }
-  
-  let stack = [root];
-  
-  while (stack.length !== 0) {
-    let current = stack.pop();
-    
-    if (current.left !== null) {
-      if (current.left.left === null && current.left.right === null) {
-        sum += current.left.val
-      } else{
-        stack.push(current.left)
-      }
-    }
-    
-    if (current.right !== null) {
-      if (current.right.left !== null || current.right.right !== null) {
-        stack.push(current.right)
-      }
-    }
-  }
-  return sum;
-  
-  
-//   if (root.left !== null) {
-//     if (root.left.left === null && root.left.right === null) {
-//       sum += root.left.val
-//     } else {
-//       sum += sumOfLeftLeaves(root.left)
-//     }
-//   }
-  
-//   if (root.right !== null) {
-//     if (root.right.left !== null || root.right.right !== null) {
-//       sum += sumOfLeftLeaves(root.right)
-//     }
-//   }
-  
-//   return sum
+  
+  return sum;
+  
+  
+//   if (root.left !== null) {
+//     if (root.left.left === null && root.left.right === null) {
+//       sum += root.left.val
+//     } else {
+//       sum += sumOfLeftLeaves(root.left)
+//     }
+//   }
+  
+//   if (root.right !== null) {
+//     if (root.right.left !== null || root.right.right !== null) {
+//       sum += sumOfLeftLeaves(root.right)
+//     }
+//   }
+  
+//   return sum
 };
