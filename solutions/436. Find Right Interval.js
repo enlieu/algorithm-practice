@@ -4,7 +4,9 @@
  */
 var findRightInterval = function(intervals) {
   if (intervals.length === 1) return [-1]
+  
   let map = new Map();
+  
   for (let i = 0; i < intervals.length; i++) {
     map.set(intervals[i][0], i)
   }
@@ -23,5 +25,6 @@ var findRightInterval = function(intervals) {
         }
       }
   }
+  
   return res
 }
