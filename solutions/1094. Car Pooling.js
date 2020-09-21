@@ -9,9 +9,9 @@ var carPooling = function(trips, capacity) {
   let maxDistance = 0;
   
   for (const [numPassengers, startLocation, endLocation] of trips) {
-    map.set(startLocation, map.get(startLocation) || 0)
-    map.set(endLocation, map.get(endLocation) || 0)
-​
+    if (!map.has(startLocation)) map.set(startLocation, 0)
+    if (!map.has(endLocation)) map.set(endLocation, 0)
+    
     map.set(startLocation, map.get(startLocation) + numPassengers)
     map.set(endLocation, map.get(endLocation) - numPassengers)
 ​
