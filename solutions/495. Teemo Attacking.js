@@ -8,8 +8,8 @@ var findPoisonedDuration = function(timeSeries, duration) {
   let poisonEnd;
   
   for (let i = 0; i < timeSeries.length; i++) {
-    if (poisonEnd >= timeSeries[i]) poisonedTime -= poisonEnd - timeSeries[i] + 1
-    poisonEnd = timeSeries[i] + duration - 1
+    if (poisonEnd >= timeSeries[i]) poisonedTime -= poisonEnd - timeSeries[i]
+    poisonEnd = timeSeries[i] + duration
     poisonedTime += duration
   }
   
