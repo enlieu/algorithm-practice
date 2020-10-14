@@ -6,6 +6,7 @@
 |41|[ First Missing Positive](https://leetcode.com/problems/first-missing-positive/)|[JavaScript](./solutions/41.%20First%20Missing%20Positive.js)|84 ms|
 |48|[ Rotate Image](https://leetcode.com/problems/rotate-image/)|[JavaScript](./solutions/48.%20Rotate%20Image.js)|80 ms|
 |435|[ Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)|[JavaScript](./solutions/435.%20Non-overlapping%20IntervalsJavaScript)|64 ms|
+|515|[ Find Largest Value in Each Tree Row](https://leetcode.com/problems/find-largest-value-in-each-tree-row/)|[JavaScript](./solutions/515.%20Find%20Largest%20Value%20in%20Each%20Tree%20Row.js)|100 ms|
 |621|[ Task Scheduler](https://leetcode.com/problems/task-scheduler/)|[JavaScript](./solutions/621.%20Task%20SchedulerJavaScript)|104 ms|
 |690|[ Employee Importance](https://leetcode.com/problems/employee-importance/)|[JavaScript](./solutions/690.%20Employee%20ImportanceJavaScript)|92 ms|
 |1351|[ Count Negative Numbers in a Sorted Matrix](https://leetcode.com/problems/count-negative-numbers-in-a-sorted-matrix/)|[JavaScript](./solutions/1351.%20Count%20Negative%20Numbers%20in%20a%20Sorted%20MatrixJavaScript)|68 ms|
