@@ -16,14 +16,13 @@ var maxAncestorDiff = function(root) {
   let queue = [[root, root.val, root.val]]
   
   let maxDiff = 0;
-  let newMin = Infinity;
-  let newMax = -Infinity;
+  
   
   while (queue.length) {
     let [node, min, max] = queue.shift();
     maxDiff = Math.max(maxDiff, node.val - min, max - node.val)
-    newMin = Math.min(min, node.val)
-    newMax = Math.max(max, node.val)
+    let newMin = Math.min(min, node.val)
+    let newMax = Math.max(max, node.val)
     
     if (node.left) {
       queue.push([node.left, newMin, newMax])
