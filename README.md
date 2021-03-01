@@ -7,6 +7,7 @@
 |48|[ Rotate Image](https://leetcode.com/problems/rotate-image/)|[JavaScript](./solutions/48.%20Rotate%20Image.js)|80 ms|
 |435|[ Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)|[JavaScript](./solutions/435.%20Non-overlapping%20IntervalsJavaScript)|64 ms|
 |515|[ Find Largest Value in Each Tree Row](https://leetcode.com/problems/find-largest-value-in-each-tree-row/)|[JavaScript](./solutions/515.%20Find%20Largest%20Value%20in%20Each%20Tree%20Row.js)|100 ms|
+|575|[ Distribute Candies](https://leetcode.com/problems/distribute-candies/)|[JavaScript](./solutions/575.%20Distribute%20Candies.js)|156 ms|
 |621|[ Task Scheduler](https://leetcode.com/problems/task-scheduler/)|[JavaScript](./solutions/621.%20Task%20SchedulerJavaScript)|104 ms|
 |690|[ Employee Importance](https://leetcode.com/problems/employee-importance/)|[JavaScript](./solutions/690.%20Employee%20ImportanceJavaScript)|92 ms|
 |881|[ Boats to Save People](https://leetcode.com/problems/boats-to-save-people/)|[JavaScript](./solutions/881.%20Boats%20to%20Save%20People.js)|164 ms|
